@@ -52,7 +52,7 @@ async function run() {
     });
 
     // Update Notes
-    // http://localhost:5000/note/${id}
+    // https://gentle-badlands-20791.herokuapp.com/note/${id}
     app.put("/note/:id", async(req,res)=>{
         const id = req.params.id;
         const data = req.body;
@@ -73,7 +73,7 @@ async function run() {
     })
 
     // Delete Notes
-    // http://localhost:5000/note/${id}
+    // https://gentle-badlands-20791.herokuapp.com/note/${id}
     app.delete('/note/:id', async(req,res)=>{
         const id = req.params.id;
         const query = {_id: ObjectId(id)};
