@@ -25,6 +25,7 @@ async function run() {
 
     // GET : get API to read all notes
     // http://localhost:5000/notes
+    // https://gentle-badlands-20791.herokuapp.com/notes
     app.get("/notes", async (req, res) => {
       /* const query = req.query;
             console.log(query) */
@@ -35,6 +36,7 @@ async function run() {
 
     // POST : Create Notes
     // http://localhost:5000/note
+    // https://gentle-badlands-20791.herokuapp.com/note
     /*****************************
          * Data Format
          * body {
@@ -66,7 +68,7 @@ async function run() {
             },
           };
         const result = await notesCollection.updateOne(filter, updateDoc, options);
-        console.log(result);
+        // console.log(result);
         res.send(result);
     })
 
