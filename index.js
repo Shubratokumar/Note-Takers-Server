@@ -27,9 +27,9 @@ async function run() {
     // http://localhost:5000/notes
     // https://gentle-badlands-20791.herokuapp.com/notes
     app.get("/notes", async (req, res) => {
-      /* const query = req.query;
-            console.log(query) */
-      const cursor = notesCollection.find({});
+      const query = req.query;
+        // console.log(query)
+      const cursor = notesCollection.find(query);
       const result = await cursor.toArray();
       res.send(result);
     });
